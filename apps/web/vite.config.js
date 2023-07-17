@@ -3,7 +3,14 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  plugins: [sentrySvelteKit() ,sveltekit()]
+  plugins: [sentrySvelteKit({
+    sourceMapsUploadOptions: {
+      cleanArtifacts: true,
+      setCommits: {
+          auto: true,
+      },
+    }
+  }) ,sveltekit()]
 };
 
 export default config;
