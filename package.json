@@ -6,12 +6,15 @@
     "lint": "turbo run lint",
     "format": "prettier --write ."
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "devDependencies": {
     "eslint": "^8.0.0",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "eslint-config-custom",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
     "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.15.0"
+  }
 }
